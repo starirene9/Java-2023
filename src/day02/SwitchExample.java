@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SwitchExample {
 
-    // 자바 상수
+    // psf 자바 상수
     public static final String SPRING = "봄";
 
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class SwitchExample {
 
         Scanner sc = new Scanner(System.in);
 
-        /*String season = sc.nextLine();
+        String season = sc.nextLine();
         double d = 3.14;
 
         // switch문에는 정수, 문자형 변수를 써야 합니다.
@@ -36,7 +36,7 @@ public class SwitchExample {
                 break;
             default: // else와 같은 효과
                 System.out.println("계절을 잘 입력하세요 ^0^");
-        }*/
+        }
 
 
         System.out.println("==============");

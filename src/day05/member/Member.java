@@ -7,7 +7,7 @@ public class Member {
     String email;
     String password;
     String memberName;
-    Gender gender;
+    Gender gender;   //alt+enter : 열거형 생성
     int age;
 
     public Member(int memberId, String email, String password, String memberName, Gender gender, int age) {
@@ -26,6 +26,6 @@ public class Member {
         return String.format("# %d번 | %s | %s | %s | %d세"
                         , this.memberId, this.email, this.memberName
                         , convertGender, this.age
-        );
+        ); //this 생략해도 되지만 붙이는것 습관화 시킬 것~!
     }
 }

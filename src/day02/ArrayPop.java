@@ -4,10 +4,11 @@ import java.util.Arrays;
 
 public class ArrayPop {
 
-    // 배열의 맨 끝 데이터 삭제하고 삭제한 데이터 리턴
     public static int pop() {
 
-        if (arr.length > 0) {
+        if (arr.length > 0) { //팝을 할게 있다는것
+
+            // 배열의 맨 끝 데이터 삭제하고 삭제한 데이터 리턴 ?
             // 0. 삭제 대상 데이터 백업
             int delTarget = arr[arr.length - 1];
 

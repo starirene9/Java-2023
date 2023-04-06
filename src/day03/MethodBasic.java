@@ -8,12 +8,9 @@ public class MethodBasic {
     // ex )  샤프계산기.add(10, 20)
     //       카시오계산기.add(20, 30)
 
-    // 자바는 모든것을 객체로 표현하고, 함수마저도 모두
-    // 메서드로 처리한다.
+    // 자바는 모든것을 객체로 표현하고, 함수마저도 모두 메서드로 처리한다.
     // 자바의 메서드는 클래스 내부에만 선언이 가능
-    // 다른 메서드 안에서 선언할 수 없음.
-
-
+    // 다른 메서드 안에서 선언할 수 없음. => 중첩함수 없음
 
     // 리턴값이 없는 함수
     static void makeLine() {
@@ -21,17 +18,18 @@ public class MethodBasic {
     }
 
     // 여러 값을 리턴하고 싶은 경우
-    // 2개 정수 전달하면 덧셈,뺄셈,곱셈 결과 리턴
+    // ex : 2개 정수 전달하면 덧셈,뺄셈,곱셈 결과 리턴
     static int[] operateAll(int n1, int n2) {
 
         return new int[]{
                 n1 + n2,
                 n1 - n2,
                 n1 * n2
-        };
+        }; //control alt v -> control alt n
     }
 
-    // n개의 정수를 전달받아 총합을 리턴
+    // multi parameter : n개의 정수를 전달받아 총합을 리턴
+    // int : 리턴하는 데이터의 타입
     static int addAll(int... numbers) {
         int total = 0;
         for (int n : numbers) {
@@ -51,12 +49,13 @@ public class MethodBasic {
         int result = add(10, 20);
         System.out.println("result = " + result);
 
-        makeLine();
+        makeLine(); //void 는 이렇게 호출
 
         int r1 = addAll(new int[]{10, 20, 30});
         System.out.println("r1 = " + r1);
 
         int r2 = addAll(10, 20, 30, 100, 200);
+        // 매개변수 앞에 ... spread 붙이면 이것 또한 배열
     }
 
     // 2개의 정수를 더해서 리턴하는 메서드

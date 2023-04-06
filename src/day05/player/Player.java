@@ -8,17 +8,17 @@ public class Player {
     int hp; // 체력
 
     // 생성자
-    public Player() {
-        this("이름없음");
-//        System.out.println("1번 생성자 호출!");
+    public Player() { // 기본 생성자
+        this("이름없음"); // 나의 또다른 생성자를 불러 주세여 -> 2번째 생성자 호출
+        System.out.println("1번 생성자 호출!");
 //        this.nickName = "이름없음";
 //        this.level = 1;
 //        this.hp = 50;
     }
 
     public Player(String nickName) {
-        this(nickName, 1, 50);
-//        System.out.println("2번 생성자 호출!");
+        this(nickName, 1, 50); // 3번 생성자 호출 : 파라미터로 구분한다.
+        System.out.println("2번 생성자 호출!");
     }
 
     public Player(String nickName, int level, int hp) {
@@ -28,12 +28,14 @@ public class Player {
     }
 
     // 기능 - 메서드
-    void levelUp(Player this) {
+    void levelUp(Player this) { //생략 혹은 숨어 있음
 
     }
+
     void attack(Player target) {
 
         if (this == target) return;
+        // 내가 나를 때린 경우는 취소
 
         System.out.println("target의 주소: " + target);
         System.out.println("this의 주소: " + this);
@@ -46,6 +48,8 @@ public class Player {
         // "가해자가 피해자를 공격해서 xxx의 피해를 입힘"
         System.out.printf("%s님이 %s님을 공격해서 %d의 피해를 입힙!\n"
                 , this.nickName, target.nickName, damage);
+        // 나의 nickName 이라고 보면 됨
+
     }
 
 

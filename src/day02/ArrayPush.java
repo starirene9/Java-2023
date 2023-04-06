@@ -44,13 +44,13 @@ public class ArrayPush {
 //        arr = temp;
 //        temp = null;
 
-
         push(40);
         push(100);
         push(2000);
         push(5000);
         push(123);
 
+        // 배열 내부데이터 문자열로 출력
         System.out.println(Arrays.toString(arr));
 
     }

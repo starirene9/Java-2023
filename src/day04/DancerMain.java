@@ -5,12 +5,13 @@ package day04;
 public class DancerMain {
 
     public static void main(String[] args) {
-
+        // 객체를 부르는 법
         Dancer kim = new Dancer();
         Dancer park = new Dancer("스트릿댄스");
         Dancer jang = new Dancer("장동견", "목각댄스", DanceLevel.PRO);
 
 //        Singer song = new Singer();
+        //
 
 
 //        System.out.println(kim);

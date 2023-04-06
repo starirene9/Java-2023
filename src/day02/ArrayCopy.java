@@ -17,10 +17,11 @@ public class ArrayCopy {
 //        for (String p : new String[] {"야옹이", "냠냠이", "콩콩이"}) {}
 
         String[] pets = {"멍멍이", "야옹이", "짹짹이"};
-//        String[] petsCopy = pets;
+//        String[] petsCopy = pets; // 주소 복사
 
-        // 1. 원본과 동일한 사이즈의 배열을 하나 더 생성
-        String[] petsCopy = new String[pets.length];
+        // 다음과 같이 복사해둬야 함
+        // 1. 원본과 동일한 사이즈의 배열(방)을 하나 더 생성
+        String[] petsCopy = new String[pets.length]; //원본 사이즈와 똑같은 배열
 
         // 2. 원본의 각 인덱스값들을 사본에 인덱스로 일일히 복사
         for (int i = 0; i < pets.length; i++) {

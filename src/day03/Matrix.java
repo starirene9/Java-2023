@@ -11,14 +11,15 @@ public class Matrix {
         int mathScore = 20;
         int engScore = 30;
 
+        // 1차원 배열
         int[] kimScores = {korScore, mathScore, engScore};
         int[] parkScores = {100, 34, 99};
         int[] hongScores = {10, 100, 11};
 
-        // 2차원 배열
+        // 2차원 배열 : 데이터가 3개 있음
         int[][] classScores = {kimScores, parkScores, hongScores};
-
-        System.out.println(classScores[0][1]);
+        // 타입 주의
+        System.out.println(classScores[0][0]);
         System.out.println(kimScores[0]);
 
         System.out.println(classScores[0][2] - classScores[1][1]);
@@ -28,7 +29,7 @@ public class Matrix {
         System.out.println(parkScores);
 
         System.out.println(Arrays.deepToString(classScores));
-
+        // [[10, 20, 30], [100, 34, 99], [10, 100, 11]]
         // 2차원배열의 값초기화
         int[][] arr2d = {
                 {10, 20, 30},
@@ -38,15 +39,16 @@ public class Matrix {
         };
         System.out.println("=====================");
         System.out.println(arr2d[1][2]);
-
+        // 2행 3열 => 60에 접근
         int[] arr3 = arr2d[2];
 
         // 2차원 배열의 순회
         for (int[] arr : arr2d) {
             for (int n : arr) {
                 System.out.printf("%3d ", n);
+                // %3d : 출력할때 억지로 3칸을 차지해라 라는 뜻 <= 영수증 출력시
             }
-            System.out.println();
+            System.out.println(); //줄 띄우기
         }
 
         // 배열의 기본값
@@ -67,6 +69,7 @@ public class Matrix {
         array2d[1][3] = 99;
         array2d[2][1] = 55;
         array2d[3] = new int[] {9, 8, 7, 6};
+        //new int[]은 변수 만들때만 생략 가능
 
         System.out.println("================");
         for (int[] ints : array2d) {
@@ -92,7 +95,7 @@ public class Matrix {
                 }
         };
 
-        System.out.println(arr3d[1][0][1]);
+        System.out.println(arr3d[1][0][1]); //60
 
     }
 

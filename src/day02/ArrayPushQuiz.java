@@ -24,7 +24,7 @@ public class ArrayPushQuiz {
 
         System.out.println("# 먹고 싶은 음식을 입력하세요!!");
         System.out.println("# 입력을 중지하려면 <그만>이라고 입력하세요.");
-
+        //위의 두줄 반복문 밖
         Scanner sc = new Scanner(System.in);
 
         while (true) {
@@ -43,7 +43,7 @@ public class ArrayPushQuiz {
             temp = null;
 
         }
-
+        // 마지막에는 이렇게 한 번 출력
         System.out.println("먹고 싶은 음식리스트: " + Arrays.toString(foodList));
 
     }

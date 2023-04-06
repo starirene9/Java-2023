@@ -13,9 +13,9 @@ public class Dancer {
 
     DanceLevel level; // 춤 수준 (0: 초보자, 1: 중수, 2: 고수)
 
-
+    // 속성과 기능 사이에 생성자가 있다.
     // 생성자: 스카우터, 개발자(공돌이), 기술자
-    // 생성자도 함수개념, 리턴타입이 주소값타입으로 고정
+    // 생성자도 함수개념, 리턴타입이 주소값으로 고정
     // 리턴값은 생성한 객체의 주소값을 리턴
     // 객체 생성시 필요한 데이터를 셋팅
 
@@ -45,11 +45,13 @@ public class Dancer {
     // 기능 (메서드) : static을 붙이지 마세요
     // 춤추는 기능
     void dance(Dancer this) {
+
         System.out.println(this.genre + "춤을 열정적으로 춥니다.");
     }
 
     // 스트레칭을 하는 기능
     void stretch() {
+
         System.out.println("몸을 유연하게 풉니다.");
     }
 
