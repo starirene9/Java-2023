@@ -1,5 +1,10 @@
 package day05.member;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDate;
+
 // 역할: 회원 저장소 역할 : 데이터 베이스의 역할
 public class MemberRepository {
     public static final int NOT_FOUND = -1; // 상수처리
@@ -40,13 +45,34 @@ public class MemberRepository {
     boolean addMember(Member newMember) {
         // 이메일이 중복인가?
         if (isDuplicateEmail(newMember.email)) return false;
+
         // 실제로 멤버를 추가하는 코드
         Member[] temp = new Member[memberList.length + 1];
         for (int i = 0; i < memberList.length; i++) {
             temp[i] = memberList[i];
         }
+
+        // 회원 가입 시간 등록 + 30일 지나서 쿠폰 발행 이런것 하면 됨
+        newMember.regDate = LocalDate.now(); // 현재 시간읽어서 regDate 등록
+
         temp[temp.length - 1] = newMember;
         memberList = temp;
+
+        //save 파일 생성
+        try (FileWriter fw = new FileWriter("/Users/bitnagu/exercise/member.txt")) {
+            String saveInfo = "";
+            saveInfo += "," + newMember.memberId;
+            saveInfo += "," + newMember.email;
+            saveInfo += "," + newMember.memberName;
+            saveInfo += "," + newMember.password;
+            saveInfo += "," + newMember.gender;
+            saveInfo += "," + newMember.age;
+
+            fw.append(saveInfo + "\n");
+
+        } catch (IOException e) {
+            System.out.println("파일 저장 실패!");
+        }
 
         return true;
     }

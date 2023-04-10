@@ -38,7 +38,7 @@ public class StringList {
     }
 
     // 배열 맨 끝 데이터 삭제하는 기능
-    String pop() {
+    public String pop() {
         String deleteTarget = sArr[sArr.length - 1];
         String[] temp = new String[sArr.length - 1];
         for (int i = 0; i < temp.length; i++) {
@@ -94,7 +94,7 @@ public class StringList {
     }
 
     // 중간 삽입 (insert)
-    void insert(int index, String newData) {
+    public void insert(int index, String newData) {
 
         if (index < 0 || index > sArr.length - 1) return;
         if (index == sArr.length - 1) push(newData);
