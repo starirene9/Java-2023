@@ -36,12 +36,14 @@ public class MemberRepository {
         }
     }
 
+
     /**
      * 회원 가입 기능
      * @param1 - newMember: 새롭게 회원가입하는 회원의 정보
      * @return :  회원가입 성공 여부
      *           성공시 true, 이메일이 중복되어 실패시 false
      */
+
     boolean addMember(Member newMember) {
         // 이메일이 중복인가?
         if (isDuplicateEmail(newMember.email)) return false;
@@ -82,6 +84,7 @@ public class MemberRepository {
      * @param1 targetEmail : 검사 대상 이메일
      * @return : 중복되었을 시 true, 사용가능할 시 false
      */
+
     boolean isDuplicateEmail(String targetEmail) {
         for (Member m : memberList) {
             if (targetEmail.equals(m.email)) {

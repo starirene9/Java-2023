@@ -122,7 +122,7 @@ public class MemberView {
         return sc.nextLine();
     }
 
-    // 엔터를 누르기전까지 멈추는 기능 : 이해 잘 못함
+    // 엔터를 누르기전까지 멈추는 기능
     void stop() {
         System.out.println("\n======= 엔터를 눌러서 계속...======");
         sc.nextLine();
